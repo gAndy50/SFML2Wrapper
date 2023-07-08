@@ -3,7 +3,7 @@
 # ABOUT
 This is wrapper of SFML 2.5.2/2.6.0 being developed for the OpenEuphoria Programming Language. It allows you to use the SFML library while using OpenEuphoria. SFML is a multimedia library similar to SDL. You can use it to create games and other multimedia projects. 
 
-This wrapper is updated as the CSFML port is updated. 
+This wrapper is updated as the CSFML port is updated. SFML Net is not wrapped as OpenEuphoria has network functions built in. 
 
 # Example
 ```euphoria
