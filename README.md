@@ -48,3 +48,11 @@ sfRenderWindow_destroy(win)
 
 # LICENSE
 You use this software at your own-risk. There is no warranty for this software. You may not hold the developer liable for anything you do this software. You may use this software to create your own projects. Projects you create with this library are yours to distribute as you please. You may not claim you wrote the original wrapper. This library is provided in the event that it is helpful.
+
+# BUILDING
+Assuming you have openEuphoria already installed and your paths are set. You can use "eui myprogram.ex" from the command line. 
+
+```euphoria
+eui RenderWinEx.ex
+```
+
