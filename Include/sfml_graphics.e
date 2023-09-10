@@ -858,6 +858,12 @@ public function sfImage_saveToFile(atom img,sequence file)
 	return c_func(xsfImage_saveToFile,{img,file})
 end function
 
+public constant xsfImage_saveToMemory = define_c_func(gfx,"+sfImage_saveToMemory",{C_POINTER,C_POINTER,C_STRING},C_BOOL)
+
+public function sfImage_saveToMemory(atom img,atom op,sequence format)
+	return c_func(xsfImage_saveToMemory,{img,op,format})
+end function
+
 public constant xsfImage_getSize = define_c_func(gfx,"+sfImage_getSize",{C_POINTER},sfVector2u)
 
 public function sfImage_getSize(atom img)
@@ -2928,4 +2934,4 @@ public constant xsfView_zoom = define_c_proc(gfx,"+sfView_zoom",{C_POINTER,C_FLO
 public procedure sfView_zoom(atom v,atom fac)
 	c_proc(xsfView_zoom,{v,fac})
 end procedure
-­1180.43
+­864.53

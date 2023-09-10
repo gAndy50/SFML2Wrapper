@@ -187,3 +187,30 @@ public constant xsfThread_terminate = define_c_proc(sys,"+sfThread_terminate",{C
 public procedure sfThread_terminate(atom thread)
 	c_proc(xsfThread_terminate,{thread})
 end procedure
+
+--Buffer Functions (buffer.h)
+
+public constant xsfBuffer_create = define_c_func(sys,"+sfBuffer_create",{},C_POINTER)
+
+public function sfBuffer_create()
+	return c_func(xsfBuffer_create,{})
+end function
+
+public constant xsfBuffer_destroy = define_c_proc(sys,"+sfBuffer_destroy",{C_POINTER})
+
+public procedure sfBuffer_destroy(atom buff)
+	c_proc(xsfBuffer_destroy,{buff})
+end procedure
+
+public constant xsfBuffer_getSize = define_c_func(sys,"+sfBuffer_getSize",{C_POINTER},C_SIZE_T)
+
+public function sfBuffer_getSize(atom buff)
+	return c_func(xsfBuffer_getSize,{buff})
+end function
+
+public constant xsfBuffer_getData = define_c_func(sys,"+sfBuffer_getData",{C_POINTER},C_POINTER)
+
+public function sfBuffer_getData(atom buff)
+	return c_func(xsfBuffer_getData,{buff})
+end function
+­214.40
