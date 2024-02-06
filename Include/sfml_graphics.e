@@ -108,6 +108,7 @@ public constant sfGlslMat4 = define_c_struct({
 	{C_FLOAT,4 * 4} --array
 })
 
+--SFML Colors
 public constant sfBlack = {0,0,0,0}
 public constant sfWhite = {255,255,255,255}
 public constant sfRed = {255,0,0,255}
@@ -2934,4 +2935,4 @@ public constant xsfView_zoom = define_c_proc(gfx,"+sfView_zoom",{C_POINTER,C_FLO
 public procedure sfView_zoom(atom v,atom fac)
 	c_proc(xsfView_zoom,{v,fac})
 end procedure
-­864.53
+­109.2

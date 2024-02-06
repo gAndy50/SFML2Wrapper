@@ -875,6 +875,158 @@ public function sfWindow_getSystemHandle(atom window)
 	return c_func(xsfWindow_getSystemHandle,{window})
 end function
 
+--WindowBase
+
+public constant xsfWindowBase_create = define_c_func(win,"+sfWindowBase_create",{sfVideoMode,C_STRING,C_UINT32},C_POINTER)
+
+public function sfWindowBase_create(sequence mode,sequence title,atom style)
+	return c_func(xsfWindowBase_create,{mode,title,style})
+end function
+
+public constant xsfWindowBase_createUnicode = define_c_func(win,"+sfWindowBase_createUnicode",{sfVideoMode,C_POINTER,C_UINT32},C_POINTER)
+
+public function sfWindowBase_createUnicode(sequence mode,object title,atom style)
+	return c_func(xsfWindowBase_createUnicode,{mode,title,style})
+end function
+
+public constant xsfWindowBase_createFromHandle = define_c_func(win,"+sfWindowBase_createFromHandle",{C_POINTER},C_POINTER)
+
+public function sfWindowBase_createFromHandle(atom handle)
+	return c_func(xsfWindowBase_createFromHandle,{handle})
+end function
+
+public constant xsfWindowBase_destroy = define_c_proc(win,"+sfWindowBase_destroy",{C_POINTER})
+
+public procedure sfWindowBase_destroy(atom win)
+	c_proc(xsfWindowBase_destroy,{win})
+end procedure
+
+public constant xsfWindowBase_close = define_c_proc(win,"+sfWindowBase_close",{C_POINTER})
+
+public procedure sfWindowBase_close(atom win)
+	c_proc(xsfWindowBase_close,{win})
+end procedure
+
+public constant xsfWindowBase_isOpen = define_c_func(win,"+sfWindowBase_isOpen",{C_POINTER},C_BOOL)
+
+public function sfWindowBase_isOpen(atom win)
+	return c_func(xsfWindowBase_isOpen,{win})
+end function
+
+public constant xsfWindowBase_pollEvent = define_c_func(win,"+sfWindowBase_pollEvent",{C_POINTER,C_POINTER},C_BOOL)
+
+public function sfWindowBase_pollEvent(atom win,atom evt)
+	return c_func(xsfWindowBase_pollEvent,{win,evt})
+end function
+
+public constant xsfWindowBase_waitEvent = define_c_func(win,"+sfWindowBase_waitEvent",{C_POINTER,C_POINTER},C_BOOL)
+
+public function sfWindowBase_waitEvent(atom win,atom evt)
+	return c_func(xsfWindowBase_waitEvent,{win,evt})
+end function
+
+public constant xsfWindowBase_getPosition = define_c_func(win,"+sfWindowBase_getPosition",{C_POINTER},sfVector2i)
+
+public function sfWindowBase_getPosition(atom win)
+	return c_func(xsfWindowBase_getPosition,{win})
+end function
+
+public constant xsfWindowBase_setPosition = define_c_proc(win,"+sfWindowBase_setPosition",{C_POINTER,sfVector2i})
+
+public procedure sfWindowBase_setPosition(atom win,sequence pos)
+	c_proc(xsfWindowBase_setPosition,{win,pos})
+end procedure
+
+public constant xsfWindowBase_getSize = define_c_func(win,"+sfWindowBase_getSize",{C_POINTER},sfVector2u)
+
+public function sfWindowBase_getSize(atom win)
+	return c_func(xsfWindowBase_getSize,{win})
+end function
+
+public constant xsfWindowBase_setSize = define_c_proc(win,"+sfWindowBase_setSize",{C_POINTER,sfVector2u})
+
+public procedure sfWindowBase_setSize(atom win,sequence size)
+	c_proc(xsfWindowBase_setSize,{win,size})
+end procedure
+
+public constant xsfWindowBase_setTitle = define_c_proc(win,"+sfWindowBase_setTitle",{C_POINTER,C_STRING})
+
+public procedure sfWindowBase_setTitle(atom win,sequence title)
+	c_proc(xsfWindowBase_setTitle,{win,title})
+end procedure
+
+public constant xsfWindowBase_setUnicodeTitle = define_c_proc(win,"+sfWindowBase_setUnicodeTitle",{C_POINTER,C_POINTER})
+
+public procedure sfWindowBase_setUnicodeTitle(atom win,object title)
+	c_proc(xsfWindowBase_setUnicodeTitle,{win,title})
+end procedure
+
+public constant xsfWindowBase_setIcon = define_c_proc(win,"+sfWindowBase_setIcon",{C_POINTER,C_UINT,C_UINT,C_POINTER})
+
+public procedure sfWindowBase_setIcon(atom win,atom w,atom h,atom pix)
+	c_proc(xsfWindowBase_setIcon,{win,w,h,pix})
+end procedure
+
+public constant xsfWindowBase_setVisible = define_c_proc(win,"+sfWindowBase_setVisible",{C_POINTER,C_BOOL})
+
+public procedure sfWindowBase_setVisible(atom win,atom vis)
+	c_proc(xsfWindowBase_setVisible,{win,vis})
+end procedure
+
+public constant xsfWindowBase_setMouseCursorVisible = define_c_proc(win,"+sfWindowBase_setMouseCursorVisible",{C_POINTER,C_BOOL})
+
+public procedure sfWindowBase_setMouseCursorVisible(atom win,atom vis)
+	c_proc(xsfWindowBase_setMouseCursorVisible,{win,vis})
+end procedure
+
+public constant xsfWindowBase_setMouseCursorGrabbed = define_c_proc(win,"+sfWindowBase_setMouseCursorGrabbed",{C_POINTER,C_BOOL})
+
+public procedure sfWindowBase_setMouseCursorGrabbed(atom win,atom grab)
+	c_proc(xsfWindowBase_setMouseCursorGrabbed,{win,grab})
+end procedure
+
+public constant xsfWindowBase_setMouseCursor = define_c_proc(win,"+sfWindowBase_setMouseCursor",{C_POINTER,C_POINTER})
+
+public procedure sfWindowBase_setMouseCursor(atom win,atom cur)
+	c_proc(xsfWindowBase_setMouseCursor,{win,cur})
+end procedure
+
+public constant xsfWindowBase_setKeyRepeatEnabled = define_c_proc(win,"+sfWindowBase_setKeyRepeatEnabled",{C_POINTER,C_BOOL})
+
+public procedure sfWindowBase_setKeyRepeatEnabled(atom win,atom en)
+	c_proc(xsfWindowBase_setKeyRepeatEnabled,{win,en})
+end procedure
+
+public constant xsfWindowBase_setJoystickThreshold = define_c_proc(win,"+sfWindowBase_setJoystickThreshold",{C_POINTER,C_FLOAT})
+
+public procedure sfWindowBase_setJoystickThreshold(atom win,atom thres)
+	c_proc(xsfWindowBase_setJoystickThreshold,{win,thres})
+end procedure
+
+public constant xsfWindowBase_requestFocus = define_c_proc(win,"+sfWindowBase_requestFocus",{C_POINTER})
+
+public procedure sfWindowBase_requestFocus(atom win)
+	c_proc(xsfWindowBase_requestFocus,{win})
+end procedure
+
+public constant xsfWindowBase_hasFocus = define_c_func(win,"+sfWindowBase_hasFocus",{C_POINTER},C_BOOL)
+
+public function sfWindowBase_hasFocus(atom win)
+	return c_func(xsfWindowBase_hasFocus,{win})
+end function
+
+public constant xsfWindowBase_getSystemHandle = define_c_func(win,"+sfWindowBase_getSystemHandle",{C_POINTER},C_POINTER)
+
+public function sfWindowBase_getSystemHandle(atom win)
+	return c_func(xsfWindowBase_getSystemHandle,{win})
+end function
+
+public constant xsfWindowBase_createVulkanSurface = define_c_func(win,"+sfWindowBase_createVulkanSurface",{C_POINTER,C_POINTER,C_POINTER},C_BOOL)
+
+public function sfWindowBase_createVulkanSurface(atom win,atom inst,atom all)
+	return c_func(xsfWindowBase_createVulkanSurface,{win,inst,all})
+end function
+
 --Vulkan
 
 public constant xsfVulkan_isAvailable = define_c_func(win,"+sfVulkan_isAvailable",{C_BOOL},C_BOOL)
@@ -894,4 +1046,4 @@ public constant xsfVulkan_getGraphicsRequiredInstanceExtensions = define_c_func(
 public function sfVulkan_getGraphicsRequiredInstanceExtensions()
 	return c_func(xsfVulkan_getGraphicsRequiredInstanceExtensions,{})
 end function
-­366.16
+­1027.64
