@@ -5,6 +5,8 @@ This is wrapper of SFML 2.6.0 being developed for the OpenEuphoria Programming L
 
 This wrapper is updated as the CSFML port is updated. SFML Net is not wrapped as OpenEuphoria has network functions built-in. 
 
+Copyright (c): 2025
+
 # Example
 ```euphoria
 --EuSFML RenderWindow Example
